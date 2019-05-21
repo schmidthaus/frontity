@@ -25,7 +25,7 @@ const Item = ({ state, item }) => {
 
 export default connect(Item);
 
-const Container = styled.li`
+const Container = styled.article`
   margin-bottom: 24px;
 `;
 
