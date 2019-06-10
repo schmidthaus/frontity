@@ -6,8 +6,8 @@ jest.mock("../");
 
 let handler: jest.Mock;
 const initStore = (data = {}) => {
-  handler = jest.fn(async (source, { route }) => {
-    await (source.data[route] = {
+  handler = jest.fn(async ({ route, state }) => {
+    await (state.source.data[route] = {
       type: "example",
       id: 1,
       isPostType: true,
